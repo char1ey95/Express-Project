@@ -4,9 +4,13 @@ exports.getJoin = (req, res) => {
     res.render('user/join.html')
 }
 
-// exports.postJoin = (req, res) => {
-//    res.redirect()
-// }
+exports.postJoin = async (req, res) => {
+    const { user_id, user_pw, user_name, nickname, birth, gender, telephone, mobile } = req.body
+    const user = await service.getUser({user_id, user_pw, user_name, nickname, birth, gender, telephone, mobile})
+
+    res.setHeader('Set-Cookie', `token=${user.user_id}; path=/;`)
+    res.redirect('/')
+}
 
 exports.getLogin = (req, res) => {
     res.render('user/login.html')

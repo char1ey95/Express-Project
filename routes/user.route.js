@@ -4,7 +4,7 @@ const controller = require('../controller/user.controller')
 
 router.get('/join', controller.getJoin)
 
-// router.post('/join', controller.postJoin)
+router.post('/join', controller.postJoin)
 
 router.get('/login', controller.getLogin)
 
