@@ -8,3 +8,4 @@ exports.insertOne = async ({user_id, user_pw, user_name, nickname, birth, gender
     
 }
 
+

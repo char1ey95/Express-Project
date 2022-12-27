@@ -9,8 +9,9 @@ exports.postJoin = async (req, res) => {
     const user = await service.serviceUser({user_id, user_pw, user_name, nickname, birth, gender, telephone, mobile})
 
     res.setHeader('Set-Cookie', `token=${user.user_id}; path=/;`)
-    res.redirect('/')
+    res.render('user/welcome.html', { user_id, user_name, gender, telephone, mobile })
 }
+
 
 exports.getLogin = (req, res) => {
     res.render('user/login.html')

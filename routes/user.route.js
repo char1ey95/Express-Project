@@ -6,6 +6,8 @@ router.get('/join', controller.getJoin)
 
 router.post('/join', controller.postJoin)
 
+// router.get('/welcome', controller.getWelcome)
+
 router.get('/login', controller.getLogin)
 
 // router.post('/login', controller.postLogin)
