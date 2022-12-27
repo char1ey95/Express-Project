@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome!</title>
+    <link href="/css/welcome.css" type="text/css" rel="stylesheet">
 </head>
 <body>
     
@@ -12,21 +13,26 @@
 
         <div id="header_wrap">
 
-            <div id="header">
-                <h1>Welcome!!!</h1>
+            <div id="header"  class="container">
+                <div>
+                    <h1>Welcome!!!</h1>
+                </div>
+                
             </div>
 
-            <div id="header_name">
-                {{user_name}}님 회원가입을 환영합니다.
+            <div id="header_name"  class="container">
+                <div>
+                    {{user_name}}님 회원가입을 환영합니다.
+                </div>
             </div>
 
         </div>
 
         <div id="body_wrap">
 
-            <div id="body">
+            <div id="body" class="container">
 
-                <ul>
+                <ul id="body_group">
 
                     <li>
                         <div>{{user_id}}</div>
