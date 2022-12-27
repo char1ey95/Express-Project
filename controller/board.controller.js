@@ -1,16 +1,19 @@
 const service = require('../services/board.service')
 
-exports.getList = (req, res) => {
-    res.render('board/list.html')
+exports.getList = async(req, res) => {
+    const itemList = await service.serviceList()
+    
+    res.render('board/list.html', {itemList})
+
 }
 
 exports.getWrite = (req, res) => {
     res.render('board/write.html')
 }
 
-// exports.postWrite = (req, res) => {
-//    res.redirect()
-// }
+exports.postWrite = (req, res) => {
+    res.redirect('/board/view')
+}
 
 exports.getView = (req, res) => {
     res.render('board/view.html')
