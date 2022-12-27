@@ -1,0 +1,80 @@
+:root {
+    --color: rgba(70, 130, 180, 0.5);
+    --black: #212121;
+    --white: #efefef;
+}
+
+#slides {
+    position: relative;
+    width: 120rem;
+    height: 60rem;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#slides > #slide {
+    position: absolute;
+    display: flex;
+    width: 120rem;
+    height: 60rem;
+    z-index: 10;
+    transition: all 0.5s;
+}
+
+#slides > #slide.on1 {
+    left: 0px;
+}
+
+#slides > #slide.on2 {
+    left: -1920px;
+}
+
+#slides > #slide.on3 {
+    left: -3840px;
+}
+
+#slides > #slide > li {
+    position: absolute;
+    transform: translateX(1920px);
+    z-index: 5;
+}
+#slides > #slide > li.on {
+    transition: all 0.5s;
+    transform: translateX(0px);
+    z-index: 5;
+}
+#slides > #slide > li.off {
+    transition: all 0.5s;
+    transform: translateX(-1920px);
+    z-index: 2;
+}
+#slides > #slide > li.back {
+    transition: all 0.5s;
+    transform: translateX(1920px);
+    z-index: 3;
+}
+
+.controller span {
+    cursor: pointer;
+    position: absolute;
+    color: var(--white);
+    text-align: center;
+    font-size: 6rem;
+    z-index: 999;
+}
+
+.prev {
+    left: 3rem;
+    top: 32.5rem;
+    transition: all 0.5s;
+} 
+
+.next {
+    right: 3rem;
+    top: 32.5rem;
+    transition: all 0.5s;
+}
+
+.prev:hover, .next:hover {
+    color: #212121;
+}

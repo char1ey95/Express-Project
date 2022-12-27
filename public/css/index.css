@@ -55,7 +55,7 @@ ul, li {
     justify-content: right;
     top: -7rem;
     width: 92.5rem;
-    z-index: 4;
+    z-index: 999;
 }
 
 .btn {
@@ -75,23 +75,23 @@ ul, li {
     background-color: #212121;
 }
 
-.header{
+/* .header{
     position: absolute;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    width: 70rem;
+    width: 80rem;
     height: 4rem;
     background: rgba(244, 245, 246, 0.5);
     border-radius: 0.5rem;
-    z-index: 3;
-}
+    z-index: 999;
+} */
 
-.logo {
+/* .logo {
     text-align: center;
     width: 30%;
-}
+} */
 
 .main_wrap {
     width: 70%;
@@ -113,44 +113,6 @@ ul, li {
 .main_menu > a:hover {
     color: #efefef;
     background-color: #212121;
-}
-
-.slideshow {
-    position: relative;
-    margin: 0 auto;
-    width: 120rem;
-    height: 65rem;
-    overflow: hidden;
-}
-
-.slide {
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-.controller span {
-    cursor: pointer;
-    position: absolute;
-    color: var(--white);
-    text-align: center;
-    font-size: 6rem;
-}
-
-.prev {
-    left: 3rem;
-    top: 32.5rem;
-    transition: all 0.5s;
-}
-
-.next {
-    right: 3rem;
-    top: 32.5rem;
-    transition: all 0.5s;
-}
-
-.prev:hover, .next:hover {
-    color: #212121;
 }
 
 .content_wrap {
