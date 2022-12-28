@@ -57,6 +57,7 @@ a {
 }
 
 #body > #body_group > li {
+    margin: 10px 0;
     display: flex;
     justify-content: center;
     padding: 20px 0;

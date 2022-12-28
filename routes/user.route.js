@@ -6,7 +6,7 @@ router.get('/join', controller.getJoin)
 
 router.post('/join', controller.postJoin)
 
-// router.get('/welcome', controller.getWelcome)
+router.get('/welcome', controller.getWelcome)
 
 router.get('/login', controller.getLogin)
 
