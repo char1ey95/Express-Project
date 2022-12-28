@@ -7,12 +7,14 @@ exports.getJoin = (req, res) => {
 exports.postJoin = async (req, res) => {
     const { user_id, user_pw, user_name, nickname, birth, gender, telephone, mobile } = req.body
     const user = await service.serviceUser({user_id, user_pw, user_name, nickname, birth, gender, telephone, mobile})
-    res.setHeader('Set-Cookie', `token=${user.user_id}; path=/;`)
-    res.redirect('welcome')
+    // console.log(user)
+    res.redirect(`welcome?user_id=${user_id}`)
 }
 
-exports.getWelcome = (req, res) => {
-    res.render('user/welcome.html')
+exports.getWelcome = async (req, res) => {
+    const user_id = req.query.user_id
+    const user = await service.serviceWelcome(user_id)
+    res.render('user/welcome.html',{ user } )
 }
 
 

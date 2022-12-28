@@ -5,3 +5,10 @@ exports.serviceUser = async ({user_id, user_pw, user_name, nickname, birth, gend
     return user
 }
 
+exports.serviceWelcome = async (user_id) => {
+    const user = await repository.joinOne(user_id)
+    // console.log('===========service')
+    // console.log(user)
+    return user
+}
+// this.serviceWelcome('web7722')
