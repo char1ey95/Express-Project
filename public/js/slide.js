@@ -1,7 +1,6 @@
 let intervalId = 0
 let count = 0
 
-
 const imgs = document.querySelectorAll("#slide > li")
 const prevBtn = document.querySelector(".prev")
 const nextBtn = document.querySelector(".next")
@@ -26,7 +25,7 @@ function slide() {
 
 function prevHandler(e) {
     clearInterval(intervalId)
-    const current = findIndex() // 현재 선택한 on..
+    const current = findIndex()
     const index = current === 0 ? imgs.length - 1 : current - 1
     imgs[current].className = "back"
     imgs[index].className = "on"
