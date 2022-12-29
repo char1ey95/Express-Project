@@ -40,6 +40,8 @@ exports.getLogout = (req, res) => {
 }
 
 exports.getProfile = (req, res) => {
+    // const user_id = req.query.user_id
+    // const user = await serviceProfile(user_id)
     res.render('user/profile.html')
 }
 
