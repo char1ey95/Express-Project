@@ -7,10 +7,10 @@ exports.getList = async(req, res) => {
 
 }
 
-// exports.getWrite = (req, res) => {
-//     // res.send('hi')
-//     res.render('board/write.html')
-// }
+exports.getWrite = (req, res) => {
+    
+    res.render('board/write.html')
+}
 
 // exports.postWrite = (req, res) => {
 //     res.redirect('/board/view')
