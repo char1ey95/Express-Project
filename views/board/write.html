@@ -7,6 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <form action="/board/view?index={{idx}}" method="post">
+        <input type="text" name="subject">
+        <input type="text" name="content"> 
+        <button type="submit">저장</button>
+    </form>
 </body>
 </html>

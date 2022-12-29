@@ -1,7 +1,7 @@
 const express = require('express')
 const nunjucks = require('nunjucks')
 const router = require('./routes/index')
-const cookieParser = require('cookie-parser')
+// const cookieParser = require('cookie-parser')
 
 const app = express()
 
@@ -16,6 +16,7 @@ app.use(express.urlencoded({ extended : false }))
 app.use(cookieParser())
 app.use(router)
 
+
 app.use((error, req, res, next) => {
     console.log(error, error.message)
     res.send(`
@@ -25,7 +26,6 @@ app.use((error, req, res, next) => {
         </script>
     `)
 })
-
 
 app.listen(3000, () => {
     console.log('start server')
