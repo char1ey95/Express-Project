@@ -14,7 +14,7 @@ exports.postJoin = async (req, res) => {
 
 exports.getWelcome = async (req, res) => {
     const user_id = req.query.user_id
-    const user = await service.serviceWelcome(user_id)
+    const user = await service.serviceUserinfo(user_id)
     res.render('user/welcome.html',{ user } )
 }
 
@@ -39,9 +39,11 @@ exports.getLogout = (req, res) => {
     res.redirect('/')
 }
 
-exports.getProfile = (req, res) => {
-    // const user_id = req.query.user_id
-    // const user = await serviceProfile(user_id)
-    res.render('user/profile.html')
+exports.getProfile =  async (req, res) => {
+    const user_id = req.cookies.token
+    const user = await service.serviceUserinfo(user_id)
+    
+
+    res.render('user/profile.html', { user })
 }
 
