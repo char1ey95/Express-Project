@@ -16,9 +16,13 @@
             <div class="header_content">
                 <div class="header_title">Team 5</div>
                 <div class="header_navigation_menus">
-                    <div class="header_navigation_menu"><a href="/">Home</a></div>
+                    {% if token %}
+                    <div class="header_navigation_menu"><a href="/user/logout">Logout</a></div>
+                    {% else %}
                     <div class="header_navigation_menu"><a href="/user/join">Join</a></div>
                     <div class="header_navigation_menu"><a href="/user/Login">Login</a></div>
+                    {% endif %}
+                    <div class="header_navigation_menu"><a href="/">Home</a></div>
                     <div class="header_navigation_menu"><a href="/user/Profile">Profile</a></div>
                     <div class="header_navigation_menu"><a href="/board/list">Board</a></div>
                 </div>
@@ -36,7 +40,7 @@
                 <li></li>
             </ul>
             <div class="controller">
-                <span class="prev"><</span>
+                <span class="prev"></span>
                 <span class="next">></span>
             </div>
         </div>
