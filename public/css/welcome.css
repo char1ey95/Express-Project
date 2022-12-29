@@ -1,5 +1,16 @@
+:root {
+    --blue:#0359ae;
+    --green: #14b09b;
+    --sand: #ebe5d9;
+    --sandy:#e4dace;
+    --brown: #cc8a56;
+    --gray: #635F5A;
+    --white: #ececec;
+    --black: #3e3e3e;
+    --font_family: 'Noto Sans KR', sans-serif;
+}
+
 * {
-    padding: 0;
     margin: 0;
 }
 
@@ -8,61 +19,184 @@ ul, li {
 }
 
 a {
+    color: black;
     text-decoration: none;
 }
 
-#wrap {
+html {
+    font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+}
+
+input {
+    width: 20rem;
+    height: 2rem;
+    font-size: 1rem;
+    border: 0;
+    border-radius: 1rem;
+    outline: none;
+    padding-left: 0.625rem;
+    background-color: rgb(233, 233, 233);
+}
+
+button{
+    background: var(--green);
+    color: var(--white);
+    border:none;
+    position:relative;
+    height:60px;
+    font-size:1.6em;
+    font-weight: 700;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+}
+button:hover{
+    background: var(--sand);
+    color:var(--black);
+}
+button:before,button:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: var(--green);
+    transition: 400ms ease all;
+}
+button:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+}
+button:hover:before,button:hover:after{
+    width:100%;
+    transition: 800ms ease all;
+}
+
+
+.wrap {
     width: 100%;
 }
 
-#header_wrap {
-    width: 100%;
-}
-
-#body_wrap {
-    width: 100%;
-}
-
-.container {
-    width: 600px;
-    margin: 0 auto;
-}
-
-#header > div {
-    margin: 0 auto;
+.header_wrap {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-#header > div > h1 {
-    padding: 50px 0 0 0;
-    box-sizing: border-box;
-}
-
-#header_name {
     margin: 0 auto;
+    width: 100%;
+    height: 10rem;
+    /* background-color: #0358ae54; */
 }
 
-#header_name > div {
-    padding: 50px 0 0 0;
-    box-sizing: border-box;
-    text-align: center;
+.header {
+    font-size: 3rem;
+    color: var(--sandy);
 }
 
-#body > #body_group {
+
+.info_wrap {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    margin: 1rem auto;
+    width: 100%;
+    
+}
+
+.info_wrap::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(127, 114, 106, .1) 50%, rgba(179, 161, 130, 1) 100%), url(../img/1.jpg) 10% no-repeat;
+    background-size: cover;
+    /* height: 100%; */
+    z-index: -1;
+}
+
+.join {
     margin: 0 auto;
-    padding: 50px 0 0 0;
-    box-sizing: border-box;
+    width: 20%;
+    /* background-color: #ebe5d9d2; */
+    border-radius: 1rem;
+    /* border-top: 1px ; */
 }
 
-#body > #body_group > li {
-    margin: 10px 0;
+.join_menu {
+    margin: 0 auto;
+    padding-right: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+.join_menu > li {
+    display: block;
+    margin: 1.5rem 0;
+}
+
+.join_menu > li > div {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+.join_menu > li:nth-child(1), li:nth-child(2){
+    margin-top: 2rem;
+}
+
+.input_text {
+    /* 폰트작업 */
+    padding: 0rem 1rem;
+    /* margin-bottom: 1rem; */
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--black);
+}
+
+.info {
+    border-radius: 0.5rem;
+    color: var(--black);
+    background-color: #ececec73;
+}
+
+.button {
+    display: flex;
+    margin: 3rem auto;
+    width: 30rem;
+}
+
+.button > button {
+    margin: 0 2rem;
+    width: 30%;
+    height: 3rem;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+
+.btn > a {
+    color: var(--white);
+}
+.btn > a:hover {
+    color: var(--black)
+}
+
+.footer_wrap {
     display: flex;
     justify-content: center;
-    padding: 20px 0;
-    box-sizing: border-box;
-    border: 1px solid #dadada;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 9rem;
+    /* border-top: 1px solid #21212147; */
+    background-color: rgba(179, 161, 130, 0.2);
 }
 
-
+.copyright {
+    color: var(--sand);
+}
