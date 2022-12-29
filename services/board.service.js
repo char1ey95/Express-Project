@@ -9,3 +9,8 @@ exports.serviceView = async(idx) => {
     const [result] = await repository.findOne(idx)
     return result
 }
+
+exports.serviceWrite = async(body) => {
+    const {subject, user_id, content} = body
+    await repository.insert(subject, user_id, content)
+}

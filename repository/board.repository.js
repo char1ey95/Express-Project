@@ -18,4 +18,10 @@ exports.findOne = async(idx)=> {
     return result
 }
 
-// this.findOne()
+// write
+exports.insert = async(subject, user_id, content) => {
+    const sql = `INSERT INTO board(subject,user_id,content) VALUES('${subject}','${user_id}','${content}');`
+
+    await pool.query(sql)
+    return
+}
