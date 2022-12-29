@@ -1,5 +1,6 @@
-const pool = require('./db')
+const pool = require('./db')    
 
+// list
 exports.findAll = async() => {
     const sql = `SELECT * FROM board;`
     const [result] = await pool.query(sql)
@@ -7,8 +8,14 @@ exports.findAll = async() => {
     return result
 }
 
-this.findAll()
 
-exports.findOne = async()=> {
-    const sql = `SELECT * FROM  where in`
+// view
+exports.findOne = async(idx)=> {
+    // console.log(idx)
+    const sql = `SELECT * FROM board WHERE idx = ${idx};`
+    const [result] = await pool.query(sql)
+    // console.log(result)
+    return result
 }
+
+// this.findOne()

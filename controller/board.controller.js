@@ -7,21 +7,24 @@ exports.getList = async(req, res) => {
 
 }
 
-exports.getWrite = (req, res) => {
-    res.render('board/write.html')
+// exports.getWrite = (req, res) => {
+//     // res.send('hi')
+//     res.render('board/write.html')
+// }
+
+// exports.postWrite = (req, res) => {
+//     res.redirect('/board/view')
+// }
+
+exports.getView = async(req, res) => {
+    const itemView = await service.serviceView(req.query.index)
+
+    res.render('board/view.html', {itemView})
 }
 
-exports.postWrite = (req, res) => {
-    res.redirect('/board/view')
-}
-
-exports.getView = (req, res) => {
-    res.render('board/view.html')
-}
-
-exports.getModify = (req, res) => {
-    res.render('board/modify.html')
-}
+// exports.getModify = (req, res) => {
+//     res.render('board/modify.html')
+// }
 
 // exports.postModify = (req, res) => {
 //    res.redirect()
