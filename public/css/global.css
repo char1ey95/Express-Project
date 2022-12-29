@@ -35,8 +35,7 @@ input {
     border: 0;
     border-radius: 1rem;
     outline: none;
-    margin-left: 2rem;
-    /* padding-left: 0.625rem; */
+    padding-left: 0.625rem;
     background-color: rgb(233, 233, 233);
 }
 
@@ -76,66 +75,4 @@ button:after{
 button:hover:before,button:hover:after{
     width:100%;
     transition: 800ms ease all;
-}
-
-.wrap {
-    width: 100%;
-}
-
-.loginWrap {
-    display: flex;
-    flex-direction: column;
-    margin: 15rem auto;
-    width: 45rem;
-    height: 23rem;
-    border-radius: 1rem;
-    background-color: #e4daced0;
-}
-
-.loginWrap::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background: linear-gradient(180deg, rgba(127, 114, 106, .1) 50%, rgba(179, 161, 130, 1) 100%), url(../img/2.jpg) 10% no-repeat;
-    background-size: cover;
-    /* height: 100%; */
-    z-index: -1;
-}
-
-.header {
-    margin: 2rem auto;
-}
-
-.header > h1 {
-    margin: 0 auto;
-    text-align: center;
-}
-
-.loginForm {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-}
-
-.loginContent {
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
-}
-
-.loginInfo {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: end;
-    font-size: 1.5rem;
-    line-height: 1.625rem;
-}
-
-.btn {
-    display: flex;
-    justify-content: center;
-    margin: 2rem auto;
 }
