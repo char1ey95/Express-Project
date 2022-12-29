@@ -1,3 +1,4 @@
 exports.getIndexPage = (req, res) => {
-    res.render('index.html')
+    const { token } = req.cookies
+    res.render('index.html', {token})
 }

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome!</title>
+    <link href="/css/welcome.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    
+    <div id="wrap">
+
+        <div id="header_wrap">
+
+            <div id="header"  class="container">
+                <div>
+                    <h1>Welcome!!!</h1>
+                </div>
+                
+            </div>
+
+            <div id="header_name"  class="container">
+                <div>
+                    {{user.user_name}}님 회원가입을 환영합니다.
+                </div>
+            </div>
+
+        </div>
+
+        <div id="body_wrap">
+
+            <div id="body" class="container">
+
+                <ul id="body_group">
+
+                    <li>
+                        <div>{{user.user_id}}</div>
+                    </li>
+                    <li>
+                        <div>{{user.user_name}}</div>
+                    </li>
+                    <li>
+                        <div>{{user.gender}}</div>
+                    </li>
+                    <li>
+                        <div>{{user.telephone}}</div>
+                    </li>
+                    <li>
+                        <div>{{user.mobile}}</div>
+                    </li>
+
+                </ul>
+            </div>
+
+            <button type="button"><a href="/">닫기</a></button>
+        </div>
+
+    </div>
+
+</body>
+</html>
