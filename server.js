@@ -13,9 +13,9 @@ nunjucks.configure('views', {
 
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended : false }))
+app.use(cookieParser())
 app.use(router)
 
-app.use(cookieParser())
 
 app.listen(3000, () => {
     console.log('start server')

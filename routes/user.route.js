@@ -10,7 +10,9 @@ router.get('/welcome', controller.getWelcome)
 
 router.get('/login', controller.getLogin)
 
-// router.post('/login', controller.postLogin)
+router.post('/login', controller.postLogin)
+
+router.get('/logout', controller.getLogout)
 
 router.get('/profile', controller.getProfile)
 

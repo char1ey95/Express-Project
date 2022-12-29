@@ -12,3 +12,14 @@ exports.serviceWelcome = async (user_id) => {
     return user
 }
 // this.serviceWelcome('web7722')
+
+exports.serviceLogin = async ({user_id, user_pw}) => {
+    // console.log(user_id, user_pw)
+    const user = await repository.findOne({ user_id, user_pw })
+    // console.log(user)
+    return user
+}
+
+// const user_id = 'web7722'
+// const user_pw = '1234'
+// this.serviceLogin({ user_id, user_pw })

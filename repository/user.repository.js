@@ -8,8 +8,6 @@ exports.insertOne = async ({user_id, user_pw, user_name, nickname, birth, gender
         return id
 }
 
-// this.insertOne(1234, 5555, , wwww, 19950313, 남자, 01048184, 0104848484)
-
 exports.joinOne = async (user_id) => {
         const sql = `SELECT * FROM user WHERE user_id = '${user_id}';`
         const [[result]] = await pool.query(sql)
@@ -17,5 +15,26 @@ exports.joinOne = async (user_id) => {
         // console.log(result)
         return result
 }
-
 // this.joinOne('web7722')
+
+exports.findOne = async (user) => {
+
+        // console.log(user)
+        const payload = Object.entries(user)
+                .map(([key, value]) => `${key}='${value}'`)
+                .join(' and ')
+        // console.log(payload)
+        // console.log('=============')
+        const sql = `SELECT * FROM user WHERE ${payload};`
+        // console.log(sql)
+        const [[result]] = await pool.query(sql)
+        // console.log(result)
+        return result
+}
+
+// const user = {
+//         user_id: 'web7722',
+//         user_pw: '1234'
+// }
+
+// this.findOne(user)
