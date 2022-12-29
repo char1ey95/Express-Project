@@ -22,10 +22,11 @@ exports.getView = async(req, res) => {
     res.render('board/view.html', {itemView})
 }
 
-// exports.getModify = (req, res) => {
-//     res.render('board/modify.html')
-// }
-
+exports.getModify = async(req, res) => {
+    // console.log(req)
+    const itemModify = await service.serviceView(req.query.index) 
+    res.render('board/modify.html', {itemModify})
+}
 // exports.postModify = (req, res) => {
 //    res.redirect()
 // }

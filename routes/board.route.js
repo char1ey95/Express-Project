@@ -9,7 +9,7 @@ router.get('/write', controller.getWrite)
 
 router.get('/view', controller.getView)
 
-// router.get('/modify', controller.getModify)
+router.get('/modify', controller.getModify)
 // router.post('/modify', controller.postModify)
 
 module.exports = router
