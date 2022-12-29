@@ -49,7 +49,7 @@
 | user_name   | varchar(50) | NO   |     | NULL    |       |
 | nickname    | varchar(50) | NO   |     | NULL    |       |
 | birth       | date        | NO   |     | NULL    |       |
-| gender      | char(4)     | YES  |     | 남자    |       |
+| gender      | char(4)     | YES  |     | 남자     |       |
 | telephone   | char(32)    | YES  |     | NULL    |       |
 | mobile      | char(32)    | NO   |     | NULL    |       |
 | user_author | tinyint(1)  | NO   |     | 1       |       |
