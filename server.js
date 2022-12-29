@@ -16,6 +16,7 @@ app.use(express.urlencoded({ extended : false }))
 app.use(cookieParser())
 app.use(router)
 
+
 app.use((error, req, res, next) => {
     console.log(error, error.message)
     res.send(`
@@ -25,7 +26,6 @@ app.use((error, req, res, next) => {
         </script>
     `)
 })
-
 
 app.listen(3000, () => {
     console.log('start server')

@@ -69,9 +69,10 @@
     line-height: 2rem;
     border-radius: 1rem;
     transition: all 1s;
+    padding: 0.75rem 1rem;
 }
 
-.header_navigation_menu:hover {
+.header_navigation_menu:hover > a {
     background-color: #fcfc2f;
 }
 

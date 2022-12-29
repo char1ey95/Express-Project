@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>게시판 수정페이지</title>
 </head>
 <body>
-    
+    <form method="post">
+        제목:{{itemModify.subject}}
+        <div>내용<input type="text" name="content" value="{{itemModify.content}}"></div>
+        <button type="submit">저장</button>
+    </form>
 </body>
 </html>
