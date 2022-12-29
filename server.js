@@ -16,6 +16,16 @@ app.use(express.urlencoded({ extended : false }))
 app.use(cookieParser())
 app.use(router)
 
+app.use((error, req, res, next) => {
+    console.log(error, error.message)
+    res.send(`
+        <script type='text/javascript'>
+            alert('${error.message}');
+            history.back();
+        </script>
+    `)
+})
+
 
 app.listen(3000, () => {
     console.log('start server')
