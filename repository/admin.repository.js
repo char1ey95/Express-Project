@@ -14,3 +14,10 @@ exports.findOne = async (user) => {
     const [[result]] = await pool.query(sql)
     return result
 }
+
+exports.findProfile = async (user_id) => {
+    const user = String(user_id)
+    const sql = `select * from user where user_id = '${user}';`
+    const [result] = await pool.query(sql)
+    return result
+}

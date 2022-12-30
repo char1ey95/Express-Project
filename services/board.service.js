@@ -8,6 +8,7 @@ exports.serviceList = async()=> {
 
 exports.serviceView = async(idx) => {
     const [result] = await repository.findOne(idx)
+    await repository.hitUp(idx)
 
     return result
 }
