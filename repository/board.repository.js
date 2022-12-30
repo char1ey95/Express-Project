@@ -46,13 +46,13 @@ exports.hitUp = async (idx) => {
 
     // result는 현재 객체 : { }
     // result안의 hit의 현재 값을 변수에 담는다
-    let hitUp = result.hitUp
+    let hitUp = result.hit
 
     // 현재 hit의 값에 1을 더한다
     hitUp = hitUp + 1
 
     // 더한 1의 값과 해당 아이디의 idx를 SQL문법으로 만든다.
-    const sql = `UPDATE board SET hit='${hitUp}' WHERE idx=${idx};`
+    const sql = `UPDATE board SET hit=${hitUp} WHERE idx=${idx};`
 
     // 만든 SQL 문법을 통해 값의 수정을 수행한다.
     await pool.query(sql)
