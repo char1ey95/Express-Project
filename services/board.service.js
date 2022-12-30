@@ -17,12 +17,12 @@ exports.serviceWrite = async(body) => {
     await repository.insert(subject, user_id, content)
 }
 
-// exports.serviceModify = async(body, idx) =>  {
-//     const {content} = body
-//     await repository.update(content,idx)
+exports.serviceModify = async(body, idx) =>  {
+    const {content} = body
+    await repository.update(content,idx)
 
-//     return 
-// }
+    return 
+}
 
 // exports.serviceDelete = async(idx) => {
 //     await repository.delete(idx)

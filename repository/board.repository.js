@@ -28,11 +28,11 @@ exports.insert = async(subject, user_id, content) => {
     return
 }
 
-// exports.update = async(content, idx) => {
-//     const sql = `UPDATE board SET content='${content}' WHERE idx=${idx};`
-//     await pool.query(sql)
-//     return
-// }
+exports.update = async(content, idx) => {
+    const sql = `UPDATE board SET content='${content}' WHERE idx=${idx};`
+    await pool.query(sql)
+    return
+}
 
 // exports.delete = async(idx)=> {
 //     const sql = `DELETE FROM board WHERE idx=${idx};`
