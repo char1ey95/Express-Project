@@ -6,6 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="/css/board.css" rel="stylesheet">
+    <style>
+        table {
+            border-collapse: collapse; 
+            text-align: center;
+        }
+
+        th,td {
+            padding: 7px 14px;
+        }
+
+        th {
+            border-top: 1px solid #dadada;
+            border-bottom: 1px solid #dadada;
+            background-color: #14b09b;
+            color: #ececec;
+        }
+
+        td {
+            border-bottom: 1px solid #dadada;
+            color: #3e3e3e;
+            background-color: #e9e9e9;
+        }
+    </style>
 </head>
 <body>
 
@@ -13,32 +36,34 @@
         <div id="header_wrap">
             <div id="header" class="container">
                 <div id="header_content">
-                    <h1>글쓰기</h1>
+                    <h1>게시판</h1>
                     <div>Team 5의 자유게시판입니다</div>
                 </div>
             </div>
         </div>
         <div id="board_wrap">
             <div id="board" class="container">
-                <div id="board_content">
-                    <table border="1">
-                        <tr>
-                            <th>번호</th>
-                            <th>제목</th>
-                            <th>작성자</th>
-                            <th>작성일</th>
-                            <th>조회수</th>
-                        </tr>
-                        {% for item in itemList %}
-                        <tr>
-                            <td>{{item.idx}}</td>
-                            <td><a href="/board/view?index={{item.idx}}">{{item.subject}}</a></td>
-                            <td>{{item.user_id}}</td>
-                            <td>{{item.registerDate}}</td>
-                            <td>{{item.hit}}</td>
-                        </tr>
-                        {% endfor %}
-                    </table>
+                <div id="board_layout">
+                    <div id="board_content">
+                        <table>
+                            <tr class="board_filed">
+                                <th>번호</th>
+                                <th>제목</th>
+                                <th>작성자</th>
+                                <th>작성일</th>
+                                <th>조회수</th>
+                            </tr>
+                            {% for item in itemList %}
+                            <tr>
+                                <td>{{item.idx}}</td>
+                                <td><a href="/board/view?index={{item.idx}}">{{item.subject}}</a></td>
+                                <td>{{item.user_id}}</td>
+                                <td>{{item.registerDate}}</td>
+                                <td>{{item.hit}}</td>
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -46,7 +71,12 @@
         <div id="footer_wrap">
             <div id="footer" class="container">
                 <div id="footer_content">
-                    <a href="/board/write">글 작성하기</a>
+                    <button type="button">
+                        <a href="/board/write">글쓰기</a>
+                    </button>
+                    <button type="button">
+                        <a href="/">뒤로가기</a>
+                    </button>
                 </div>
             </div>
         </div>

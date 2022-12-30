@@ -5,13 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="/css/global.css" rel="stylesheet">
+    <link href="/css/write.css" rel="stylesheet">
 </head>
 <body>
-    <form  method="post">
-        <input type="text" name="subject">
-        <input type="text" name="content"> 
-        <input type="text" name="user_id">
-        <button type="submit">저장</button>
-    </form>
+
+    <div id="wrap">
+
+        <div id="header_wrap">
+            <div id="header" class="container">
+                <div id="subject">
+                    <h1>
+                        게시글 작성
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div id="content_wrap">
+            <div id="content" class="container">
+                <div id="content_layout">
+                    <form  method="post">
+                        <div>제목</div>
+                        <input type="text" name="subject">
+                        <div>작성자</div>
+                        <input type="text" name="user_id"> 
+                        <div>내용</div>
+                        <input type="text" name="content" id="content">
+                        <div id="button">
+                            <button type="submit">
+                                저장
+                            </button>
+                            <button type="button" class="back">
+                                <a href="/board/list">뒤로가기</a>
+                            </button>
+                        </div> 
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
 </body>
 </html>
