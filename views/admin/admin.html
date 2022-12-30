@@ -5,8 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script defer src="/js/admin.js"></script>
 </head>
 <body>
-    
+    <div id="wrap">
+        <div id="header_wrap">
+            <div id="header" class="container">
+                <div id="header_content">
+                    <h1>관리자 페이지</h1>
+                </div>
+            </div>
+        </div>
+        <div id="board_wrap">
+            <div id="board" class="container">
+                <div id="board_content">
+                    <table border="1">
+                        <tr>
+                            <th>회원아이디</th>
+                            <th>회원이름</th>
+                            <th>닉네임</th>
+                            <th>전화번호</th>
+                            <th>회원사용여부</th>
+                            <th>회원권한레벨</th>
+                            <th>회원프로필</th>
+                        </tr>
+                        {% for list in userList %}
+                        <tr>
+                            <td>{{list.user_id}}</td>
+                            <td>{{list.user_name}}</td>
+                            <td>{{list.nickname}}</td>
+                            <td>{{list.mobile}}</td>
+                            <td class="author">{{list.user_author}}</td>
+                            <td>
+                                <select name="{{list.level}}">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </td>
+                            <td><a href="/user/profile">보기</a></td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <div id="footer_wrap">
+            <div id="footer" class="container">
+                <div id="footer_content">
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
