@@ -25,3 +25,9 @@ exports.insert = async(subject, user_id, content) => {
     await pool.query(sql)
     return
 }
+
+exports.update = async(content, idx) => {
+    const sql = `UPDATE board SET content='${content}' WHERE idx=${idx};`
+    await pool.query(sql)
+    return
+}
