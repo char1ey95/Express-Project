@@ -5,12 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>게시판 수정페이지</title>
+    <link href="/css/global.css" rel="stylesheet">
+    <link href="/css/modify.css" rel="stylesheet">
 </head>
 <body>
-    <form method="post">
-        제목:{{itemModify.subject}}
-        <div>내용<input type="text" name="content" value="{{itemModify.content}}"></div>
-        <button type="submit">저장</button>
-    </form>
+
+    <div id="wrap">
+        <div id="header_wrap">
+            <div id="header" class="container">
+                <div id="subject">
+                    <h1>
+                        Modify Page
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <div id="content_wrap">
+            <div id="content" class="container">
+                <div id="content_layout">
+                    <form method="post">
+                        <div>제목</div>
+                        <div id="subject">{{itemModify.subject}}</div> 
+                        <div>내용</div>
+                        <input type="text" name="content" value="{{itemModify.content}}">
+                        <div id="button">
+                            <button type="submit">저장</button>
+                            <button type="button">
+                                <a href='/board/view.html'>뒤로가기</a>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </body>
 </html>
