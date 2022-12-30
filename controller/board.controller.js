@@ -36,7 +36,7 @@ exports.postModify = async(req, res) => {
     res.redirect(`/board/view?index=${req.query.index}`)
 }
 
-// exports.postDelete = async(req,res) => {
-//     await service.serviceDelete(req.query.index)
-//     res.redirect('/board/list')
-// }
+exports.postDelete = async(req,res) => {
+    await service.serviceDelete(req.query.index)
+    res.redirect('/board/list')
+}

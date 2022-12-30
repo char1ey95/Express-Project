@@ -24,6 +24,6 @@ exports.serviceModify = async(body, idx) =>  {
     return 
 }
 
-// exports.serviceDelete = async(idx) => {
-//     await repository.delete(idx)
-// }
+exports.serviceDelete = async(idx) => {
+    await repository.delete(idx)
+}
