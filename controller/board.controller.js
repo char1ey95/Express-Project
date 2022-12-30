@@ -4,29 +4,39 @@ exports.getList = async(req, res) => {
     const itemList = await service.serviceList()
     
     res.render('board/list.html', {itemList})
-
 }
 
 exports.getWrite = (req, res) => {
-    
+
     res.render('board/write.html')
 }
 
-// exports.postWrite = (req, res) => {
-//     res.redirect('/board/view')
-// }
-
+// this.getList()
 exports.getView = async(req, res) => {
     const itemView = await service.serviceView(req.query.index)
 
-    res.render('board/view.html', {itemView})
+    res.render('board/view.html',{itemView})
 }
 
 exports.getModify = async(req, res) => {
-    // console.log(req)
     const itemModify = await service.serviceView(req.query.index) 
+
     res.render('board/modify.html', {itemModify})
 }
-// exports.postModify = (req, res) => {
-//    res.redirect()
+
+// post
+exports.postWrite = async(req, res) => {
+    await service.serviceWrite(req.body)
+
+    res.redirect('/board/list')
+}
+
+// exports.postModify = async(req, res) => {
+//     await service.serviceModify(req.body, req.query.index)
+//     res.redirect(`/board/view?index=${req.query.index}`)
+// }
+
+// exports.postDelete = async(req,res) => {
+//     await service.serviceDelete(req.query.index)
+//     res.redirect('/board/list')
 // }

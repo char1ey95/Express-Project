@@ -12,4 +12,4 @@ const pool = mysql.createPool({
 
 module.exports = pool
 
-// console.log(pool)
+
