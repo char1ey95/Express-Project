@@ -31,10 +31,10 @@ exports.postWrite = async(req, res) => {
     res.redirect('/board/list')
 }
 
-// exports.postModify = async(req, res) => {
-//     await service.serviceModify(req.body, req.query.index)
-//     res.redirect(`/board/view?index=${req.query.index}`)
-// }
+exports.postModify = async(req, res) => {
+    await service.serviceModify(req.body, req.query.index)
+    res.redirect(`/board/view?index=${req.query.index}`)
+}
 
 // exports.postDelete = async(req,res) => {
 //     await service.serviceDelete(req.query.index)
