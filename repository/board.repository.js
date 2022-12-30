@@ -34,7 +34,7 @@ exports.update = async(content, idx) => {
     return
 }
 
-// exports.delete = async(idx)=> {
-//     const sql = `DELETE FROM board WHERE idx=${idx};`
-//     await pool.query(sql)
-// }
+exports.delete = async(idx)=> {
+    const sql = `DELETE FROM board WHERE idx=${idx};`
+    await pool.query(sql)
+}
