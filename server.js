@@ -27,7 +27,7 @@ app.use((error, req, res, next) => {
     `)
 })
 
-app.listen(3005, () => {
+app.listen(3000, () => {
     console.log('start server')
 })
 

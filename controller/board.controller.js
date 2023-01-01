@@ -3,7 +3,10 @@ const service = require('../services/board.service')
 
 // list
 exports.getList = async(req, res) => {
+    const { token } = req.cookies
+    const { level } = await service.serviceLogin(token)
     const itemList = await service.serviceList()
+    res.setHeader('Set-Cookie', `level=${level}; path=/board;`)
     res.render('board/list.html', {itemList})
 }
 
@@ -37,7 +40,11 @@ exports.postModify = async(req, res) => {
 }
 
 // delete
-exports.postDelete = async(req,res) => {
+exports.postDelete = async(req,res,next) => {
+    const user_id = req.body.user_id
+    const logInUser = req.cookies.token
+    const logInLevel = req.cookies.level
+    if( user_id !== logInUser && logInLevel === '3') return next(new Error('삭제 권한이 없습니다.'))
     await service.serviceDelete(req.query.index)
     res.redirect('/board/list')
 }

@@ -40,6 +40,11 @@ exports.hitUp = async (idx) => {
     await pool.query(sql)
 }
 
+exports.findUser = async (user_id) => {
+    const sql = `SELECT * FROM user WHERE user_id='${user_id}';`
+    const [[result]] = await pool.query(sql)
+    return result
+}
 
 
 
