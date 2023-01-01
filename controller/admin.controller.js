@@ -1,16 +1,7 @@
 const service = require('../services/admin.service')
 
-exports.getAdmin = async (req, res) => {
-    const userList = await service.serviceUserList()
-
-    res.render('admin/userList.html', {userList})
-}
-
-exports.getProfile = async (req, res) => {
-    const user_id = req.query.user_id
-    const user = await service.serviceUserProfile(user_id)
-
-    res.render('admin/userEdit.html', { user })
+exports.getLogin = async (req, res) => {
+    res.render('admin/admin.html')
 }
 
 exports.postLogin = async (req, res, next) => {
@@ -22,14 +13,24 @@ exports.postLogin = async (req, res, next) => {
     res.redirect('/admin/userList')
 }
 
-exports.getLogin = async (req, res) => {
+exports.getAdmin = async (req, res) => {
+    const userList = await service.serviceUserList()
 
-    res.render('admin/admin.html')
+    res.render('admin/userList.html', {userList})
 }
 
 exports.postUpdate = async (req, res) => {
-    const result = JSON.stringify(req.body)
+    const body = JSON.stringify(req.body)
+    const result = JSON.parse(body)
     await service.serviceUpdateUser(result)
 
-    res.redirect('/admin')
+    res.redirect('/admin/userList')
 }
+
+exports.getProfile = async (req, res) => {
+    const user_id = req.query.user_id
+    const user = await service.serviceUserProfile(user_id)
+
+    res.render('admin/userEdit.html', { user })
+}
+

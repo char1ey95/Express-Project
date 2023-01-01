@@ -16,24 +16,6 @@ exports.serviceUserProfile = async (user_id) => {
 }
 
 exports.serviceUpdateUser = async (body) => {
-    const obj = JSON.parse(body)
-    const [id, author, level] = Object.entries(obj)
-    const [key, val] = id
-    
-
-    // await repository.updateUser(user_id, user_author, level)
+    const { user_id, user_author, level } = body
+    await repository.updateUser(user_id, user_author, level)
 }
-
-
-// {
-//     user_id: [ 'ckstn410', 'normal', 'normal1', 'normal2', 'normal3', 'normal4' ],
-//     user_author: [ '2', '2', '2', '2', '2', '2' ],
-//     level: [ '1', '1', '1', '1', '1', '1' ]
-// }
-
-// {user_id : 'ckstn410', user_author : '2', level : '1'}
-// {user_id :  'normal' , user_author : '2', level : '1'}
-// {user_id :  'normal1', user_author : '2', level : '1'}
-// {user_id :  'normal2', user_author : '2', level : '1'}
-// {user_id :  'normal3', user_author : '2', level : '1'}
-// {user_id :  'normal4', user_author : '2', level : '1'}

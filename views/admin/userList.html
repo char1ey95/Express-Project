@@ -25,35 +25,45 @@
         <div id="board_wrap">
             <div id="board" class="container">
                 <div id="board_content">
-                    <form method="post">
-                        <table border="1">
+                    <table>
+                        <tr>
+                            <th>회원아이디</th>
+                            <th>회원이름</th>
+                            <th>닉네임</th>
+                            <th>전화번호</th>
+                            <th>회원이용여부</th>
+                            <th>회원권한레벨</th>
+                            <th>회원프로필</th>
+                        </tr>
+                        {% for list in userList %}
+                        <tr>
+                            <td>{{list.user_id}}
+                                <input type="hidden" name="user_id" value="{{list.user_id}}">
+                            </td>
+                            <td>{{list.user_name}}</td>
+                            <td>{{list.nickname}}</td>
+                            <td>{{list.mobile}}</td>
+                            <td class="author">{{list.user_author}}</td>
+                            <td>{{list.level}}</td>
+                            <td><a href="/admin/userEdit?user_id={{list.user_id}}">보기</a></td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                    <form method="post" class="change_wrap">
+                        <table class="change">
                             <tr>
-                                <th>회원아이디</th>
-                                <th>회원이름</th>
-                                <th>닉네임</th>
-                                <th>전화번호</th>
-                                <th>회원이용여부</th>
-                                <th>회원사용변경</th>
-                                <th>회원권한레벨</th>
-                                <th>권한레벨변경</th>
-                                <th>회원프로필</th>
+                                <th>변경할 회원 아이디 입력</th>
+                                <th>회원사용 변경</th>
+                                <th>권한레벨 변경</th>
                             </tr>
-                            {% for list in userList %}
                             <tr>
-                                <td>{{list.user_id}}
-                                    <input type="hidden" name="user_id" value="{{list.user_id}}">
-                                </td>
-                                <td>{{list.user_name}}</td>
-                                <td>{{list.nickname}}</td>
-                                <td>{{list.mobile}}</td>
-                                <td class="author">{{list.user_author}}</td>
+                                <td><input type="text" name="user_id" class="box"></td>
                                 <td>
                                     <select name="user_author">
-                                        <option value="2">가능</option>
-                                        <option value="1">불가능</option>
+                                        <option value="1">가능</option>
+                                        <option value="2">불가능</option>
                                     </select>
                                 </td>
-                                <td>{{list.level}}</td>
                                 <td>
                                     <select name="level">
                                         <option value="1">1</option>
@@ -61,11 +71,9 @@
                                         <option value="3">3</option>
                                     </select>
                                 </td>
-                                <td><a href="/admin/userEdit?user_id={{list.user_id}}">보기</a></td>
                             </tr>
-                            {% endfor %}
                         </table>
-                        <button type="submit">변경</button>
+                        <button type="submit" class="btn">변경하기</button>
                     </form>
                 </div>
             </div>

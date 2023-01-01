@@ -36,8 +36,9 @@ table {
 }
 
 tbody {
-    width: 100%;
-    display: inline-block;
+    width: 55%;
+    margin: 0 auto;
+    display: block;
 }
 
 tbody > tr {
@@ -91,25 +92,54 @@ td {
 }
 
 #board_content {
-    width: 100%;
+    width: 75%;
     margin: 0 auto;
 }
 
 #board_content > form {
+    width: 100%;
     position: relative;
-    width: 52.0225%;
     margin: 0 auto;
 }
 
-#board_content > form > button {
-    position: absolute;
-    right: 0;
-    margin: 2rem 0;
+.box {
+    background-color: #fff;
+}
+
+.btn {
+    float: right;
+    margin: 1rem 22.25rem;
     width: 100px;
     height: 40px;
     font-size: 20px;
     padding: 5px 10px;
     background-color: var(--brown);
+}
+
+.change {
+    width: 55%;
+    margin: 0 auto;
+}
+
+.change > tbody {
+    width: 100%;
+    margin: 2rem auto;
+}
+
+.change > tbody > tr {
+    width: 100%;
+}
+
+.change > tbody > tr > th:nth-child(1) {
+    width: 50%;
+}
+
+.change > tbody > tr > th:nth-child(2) {
+    width: 25%;
+}
+
+.change > tbody > tr > th:nth-child(3) {
+    width: 25%;
 }
 
 .footer {
