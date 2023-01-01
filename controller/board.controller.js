@@ -9,11 +9,13 @@ exports.getList = async(req, res) => {
 
 // write
 exports.getWrite = (req, res) => {
-    res.render('board/write.html')
+    const user_id = req.cookies.token
+    res.render('board/write.html', {user_id})
 }
 
 exports.postWrite = async(req, res) => {
-    await service.serviceWrite(req.body)
+    const user_id = req.cookies.token
+    await service.serviceWrite(req.body, user_id)
     res.redirect('/board/list')
 }
 

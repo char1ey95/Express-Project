@@ -11,8 +11,8 @@ exports.serviceView = async(idx) => {
     return result
 }
 
-exports.serviceWrite = async(body) => {
-    const {subject, user_id, content} = body
+exports.serviceWrite = async(body, user_id) => {
+    const {subject, content} = body
     await repository.insert(subject, user_id, content)
 }
 
