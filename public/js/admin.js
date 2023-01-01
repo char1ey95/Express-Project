@@ -1,5 +1,5 @@
 const author = document.querySelectorAll('.author')
-const xhr = new XMLHttpRequest()
+// const xhr = new XMLHttpRequest()
 
 for (let i = 0; i < author.length; i++) {
     if (author[i].innerHTML !== 1) {
@@ -9,6 +9,6 @@ for (let i = 0; i < author.length; i++) {
     }
 }
 
-author.addEventListener('click', () => {
+// author.addEventListener('click', () => {
 
-})
+// })

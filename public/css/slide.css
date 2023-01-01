@@ -42,17 +42,17 @@
 }
 
 #slides > #slide > li:nth-child(1) {
-    background-image: url(../img/aurora2.jpg);
+    background-image: url(../img/main/slide1.jpg);
     background-size: cover;
 }
 
 #slides > #slide > li:nth-child(2) {
-    background-image: url(../img/landscape-g544abb4d7_1920.jpg);
+    background-image: url(../img/main/slide2.jpg);
     background-size: cover;
 }
 
 #slides > #slide > li:nth-child(3) {
-    background-image: url(../img/night-g0027164a0_1280.jpg);
+    background-image: url(../img/main/slide3.jpg);
     background-size: cover;
 }
 

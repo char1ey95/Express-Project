@@ -21,3 +21,10 @@ exports.findProfile = async (user_id) => {
     const [result] = await pool.query(sql)
     return result
 }
+
+exports.updateUser = async (user_id, user_author, level) => {
+    const updateAuthor =`UPDATE user SET user_author=${user_author} WHERE user_id='${user_id}';`
+    const updatelevel =`UPDATE user SET level=${level} WHERE user_id='${user_id}';`
+    await pool.query(updateAuthor)
+    await pool.query(updatelevel)
+}
