@@ -1,4 +1,4 @@
 exports.getIndexPage = (req, res) => {
-    const { token } = req.cookies
-    res.render('index.html', {token})
+    const { token, level } = req.cookies
+    res.render('index.html', {token, level})
 }

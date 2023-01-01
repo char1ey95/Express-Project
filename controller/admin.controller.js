@@ -3,7 +3,7 @@ const service = require('../services/admin.service')
 exports.getAdmin = async (req, res) => {
     const userList = await service.serviceUserList()
 
-    res.render('admin/admin.html', {userList})
+    res.render('admin/userList.html', {userList})
 }
 
 exports.getProfile = async (req, res) => {
@@ -13,18 +13,18 @@ exports.getProfile = async (req, res) => {
     res.render('admin/userEdit.html', { user })
 }
 
-exports.postLogin = async (req, res) => {
+exports.postLogin = async (req, res, next) => {
     const { user_id, user_pw } = req.body
     const user = await service.serviceLogin({ user_id, user_pw })
-    if(user === undefined) return next(new Error('아이디와 패스워드가 일치하지 않습니다'))
-    res.setHeader('Set-Cookie', `token=${user.user_id}; path=/;`)
+    if(user.user_id !== 'admin') return next(new Error('접근할 수 없습니다!!'))
+    res.setHeader('Set-Cookie', `level=${user.level}; path=/admin;`)
 
-    res.redirect('/')
+    res.redirect('/admin/userList')
 }
 
 exports.getLogin = async (req, res) => {
 
-    res.render('admin/adminLogin.html')
+    res.render('admin/admin.html')
 }
 
 exports.postUpdate = async (req, res) => {
