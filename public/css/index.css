@@ -41,7 +41,32 @@ ul, li {
     width: 100%;
     height: 100%;
     background-color: #0358ae5c;
+    /* animation-name: change;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; */
 }
+
+/* @keyframes change {
+    0% {
+        background-color: #0358ae8d;
+    }
+
+    25% {
+        background-color: #14b09bb1;
+    }
+
+    50% {
+        background-color: #dfdfdf;
+    }
+
+    75% {
+        background-color: #cc89566f;
+    }
+
+    100% {
+        background-color: #14b09bd1;
+    }
+} */
 
 .content_wrap {
     width: 100%;
