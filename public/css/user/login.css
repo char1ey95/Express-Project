@@ -99,7 +99,7 @@ button:hover:before,button:hover:after{
     right: 0;
     left: 0;
     bottom: 0;
-    background: linear-gradient(180deg, rgba(127, 114, 106, .1) 50%, rgba(179, 161, 130, 1) 100%), url(../img/2.jpg) 10% no-repeat;
+    background: linear-gradient(180deg, rgba(127, 114, 106, .1) 50%, rgba(179, 161, 130, 1) 100%), url(../../img/user/login.jpg) 10% no-repeat;
     background-size: cover;
     /* height: 100%; */
     z-index: -1;
