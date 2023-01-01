@@ -5,70 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script defer src="/js/admin.js"></script>
+    <link rel="stylesheet" href="/css/admin/adminLogin.css">
+    <link rel="stylesheet" href="/css/admin/gradation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap'); </style>
+    <script type="module" src="/js/admin/gradation.js"></script>
 </head>
 <body>
-    <div id="wrap">
-        <div id="header_wrap">
-            <div id="header" class="container">
-                <div id="header_content">
-                    <h1>관리자 페이지</h1>
-                </div>
+    <div class="wrap">
+        <div class="loginWrap">
+            <div class="header">
+                <h1>관리자 로그인</h1>
             </div>
-        </div>
-        <div id="board_wrap">
-            <div id="board" class="container">
-                <div id="board_content">
-                    <form method="post">
-                        <table border="1">
-                            <tr>
-                                <th>회원아이디</th>
-                                <th>회원이름</th>
-                                <th>닉네임</th>
-                                <th>전화번호</th>
-                                <th>회원이용여부</th>
-                                <th>회원사용변경</th>
-                                <th>회원권한레벨</th>
-                                <th>권한레벨변경</th>
-                                <th>회원프로필</th>
-                            </tr>
-                            {% for list in userList %}
-                            <tr>
-                                <td>{{list.user_id}}
-                                    <input type="hidden" name="user_id" value="{{list.user_id}}">
-                                </td>
-                                <td>{{list.user_name}}</td>
-                                <td>{{list.nickname}}</td>
-                                <td>{{list.mobile}}</td>
-                                <td>{{list.user_author}}</td>
-                                <td>
-                                    <select name="user_author">
-                                        <option value="2">가능</option>
-                                        <option value="1">불가능</option>
-                                    </select>
-                                </td>
-                                <td>{{list.level}}</td>
-                                <td>
-                                    <select name="level">
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                    </select>
-                                </td>
-                                <td><a href="/admin/userEdit?user_id={{list.user_id}}">보기</a></td>
-                            </tr>
-                            {% endfor %}
-                        </table>
-                        <button type="submit">변경</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-        
-        <div id="footer_wrap">
-            <div id="footer" class="container">
-                <div id="footer_content">
-                </div>
+            <div class="loginForm">
+                <form action="/admin" method="post">
+                    <div class="loginContent">
+                        <div class="loginInfo"> 아이디 : <input type="text" name="user_id"> </div>
+                        <div class="loginInfo"> 비밀번호 : <input type="password" name="user_pw"> </div>
+                    </div>
+                    <div class="btn">
+                        <button type="submit">로그인</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

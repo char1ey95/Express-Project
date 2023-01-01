@@ -16,6 +16,11 @@ exports.serviceWrite = async(body, user_id) => {
     await repository.insert(subject, user_id, content)
 }
 
+exports.serviceLogin = async (user_id) => {
+    const user = await repository.findUser(user_id)
+    return user
+}
+
 exports.serviceModify = async(body, idx) =>  {
     const {content} = body
     await repository.update(content,idx)
