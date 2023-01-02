@@ -68,6 +68,29 @@ ul, li {
     }
 } */
 
+.observer_opacity {
+    position: relative;
+    padding: 2rem;
+    bottom: -3rem;
+    opacity: 0;
+    transition: all 1.5s;
+}
+
+.observer_opacity__1 {
+    position: relative;
+    padding: 2.5rem;
+    bottom: 0;
+    opacity: 1;
+    transition: all 1.5s;
+}
+
+.observer_opacity_2 {
+    /* position: relative; */
+    bottom: -3rem;
+    opacity: 0;
+    transition: all 2s;
+}
+
 .content_wrap {
     width: 100%;
 }
