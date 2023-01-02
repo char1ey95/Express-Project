@@ -1,8 +1,54 @@
+<!-- Header -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=Team5&fontSize=90" />
+
+# Slide
+</br>![slide](https://user-images.githubusercontent.com/83848462/210202091-08c59b60-c454-425b-92ee-10d0adc34638.gif)
+
+# Write Page
+![write](https://user-images.githubusercontent.com/83848462/210202101-ce83bda0-5798-4f75-85cb-8c285babeb35.gif)
+
+# Admin Page
+![admin](https://user-images.githubusercontent.com/83848462/210202102-4a8a197e-32e7-4bfb-af79-8d1e6f672b67.gif)
+
+# ⛄︎프로젝트 일정⛄︎
+<img src="public/img/프로젝트일정.png"/>
+
+
+
+
+# 💻 Platforms & Language 🧾
+
+<div>
+    <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=MySQL&logoColor=white" />
+    <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=HTML5&logoColor=white" />
+    <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=white" />
+    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=white" />
+    <img src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=Node.js&logoColor=white" />
+</div>
+
+</br>
+
+# Tools 🛠️
+
+<div>
+    <img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=flat&logo=Visual Studio Code&logoColor=white" />
+    <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=GitHub&logoColor=white" />
+</div>
+
+</br>
+
+# 🎨 SNS & Portfolio 🎨 
+<div>
+     <img src="https://img.shields.io/badge/Tistory-000000?style=flat&logo=Tistory&logoColor=white" />
+    <img src="https://img.shields.io/badge/Gmail-EA4335?style=flat&logo=Gmail&logoColor=white" />
+</div>
+
+
 # Express Project
 
--   강찬수(프론트엔드)
--   김성희(백엔드)
--   박종환(백엔드)
+-   강찬수
+-   김성희
+-   박종환
 
 ## 1일차
 
@@ -75,65 +121,28 @@
 
 ## 2일차
 
-### 목표
-
 -   분배된 파트 라우터 1개(백엔드)
-
-### 작업진행도
-
--   찬수: main 구현(Front)
--   성희 : /board/list 구현(Back)
--   성희 : Javascript 학습
--   종환 : /user/join 구현(Back)
--   종환 : Cookie 학습
 
 ## 3일차
 
-### 목표
-
 -   분배된 파트 라우터 1개(백엔드)
-
-### 작업진행도
-
--   찬수 : 각 페이지 별 색상 및 폼 구상
--   찬수 : home 기능 구현
--   성희 : view 페이지 구현
--   성희 : write GET 구현
--   성희 : view, write 완료
--   종환 : Welcome 구현
--   종환 : welcome, profile 구상
 
 ## 4일차
 
-### 목표
-
 -   분배된 파트 라우터 1개(백엔드)
 -   화면 꾸미기(프론트 엔드)
-
-### 작업진행도
-
--   Board/write 작업완료
--   Board/modify 작업완료
--   Board/delete 작업완료
--   User/logout 작업완료
--   Html 및 Css 작업 시작
--   Admin 작업시작
 
 ## 5일차
 
 -   화면 꾸미기(프론트 엔드)
 
-### 작업진행도
 
--   User, Board 오류체크
--   각 파트별 마무리 점검
--   게시판 Css 작업시작
--   Admin 기능 작업 시작
 
-## 6~7일차
 
-### 작업진행도
+<!-- 영상 -->
 
--   최종 디자인 점검
--   웹페이지 전체적인 오류 점검
--   Admin 기능 작업완료
+
+</br>
+
+<!-- Footer -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=footer&text=Thanks!&fontSize=90" />
