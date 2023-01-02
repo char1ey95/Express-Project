@@ -39,7 +39,7 @@
                             </tr>
                             {% for item in itemList %}
                             <tr class="board_content">
-                                <td>{{item.idx}}</td>
+                                <td>{{loop.index}}</td>
                                 <td><a href="/board/view?index={{item.idx}}">{{item.subject}}</a></td>
                                 <td>{{item.user_id}}</td>
                                 <td>{{item.registerDate}}</td>

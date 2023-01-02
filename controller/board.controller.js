@@ -30,6 +30,10 @@ exports.getView = async(req, res) => {
 
 // modify
 exports.getModify = async(req, res) => {
+    const user_id = req.body.user_id
+    const logInUser = req.cookies.token
+    const logInLevel = req.cookies.level
+    if( user_id !== logInUser && logInLevel === '3') return next(new Error('삭제 권한이 없습니다.'))
     const itemModify = await service.serviceView(req.query.index) 
     res.render('board/modify.html', {itemModify})
 }
