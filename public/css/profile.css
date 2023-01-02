@@ -28,6 +28,14 @@ a {
     margin: 0 auto;
 }
 
+.container > #info_img {
+    width: 420px;
+    height: 540px;
+    background-image: url(../img/duck.png);
+    background-repeat: no-repeat center;
+    background-size: 420px 540px;
+}
+
 #header > #subject > div {
     padding: 100px 0 20px 0;
     box-sizing: border-box;
@@ -50,6 +58,7 @@ a {
     margin: 40px 20px;
     border: 1px solid #dadada;
 }
+
 
 #info_user > ul > li > .list_subject {
     margin: 40px 0 5px 0;

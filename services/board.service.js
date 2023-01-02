@@ -27,3 +27,8 @@ exports.serviceModify = async(body, idx) =>  {
 exports.serviceDelete = async(idx) => {
     await repository.delete(idx)
 }
+
+exports.serviceHit = async(hit) => {
+    
+    await repository.delete(hit)
+}

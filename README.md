@@ -1,3 +1,39 @@
+<!-- Header -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=Team5&fontSize=90" />
+
+# ⛄︎프로젝트 일정⛄︎
+<img src="public/img/프로젝트일정.png"/>
+
+</br>
+
+# 💻 Platforms & Language 🧾
+
+<div>
+    <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=MySQL&logoColor=white" />
+    <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=HTML5&logoColor=white" />
+    <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=white" />
+    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=white" />
+    <img src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=Node.js&logoColor=white" />
+</div>
+
+</br>
+
+# Tools 🛠️
+
+<div>
+    <img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=flat&logo=Visual Studio Code&logoColor=white" />
+    <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=GitHub&logoColor=white" />
+</div>
+
+</br>
+
+# 🎨 SNS & Portfolio 🎨 
+<div>
+     <img src="https://img.shields.io/badge/Tistory-000000?style=flat&logo=Tistory&logoColor=white" />
+    <img src="https://img.shields.io/badge/Gmail-EA4335?style=flat&logo=Gmail&logoColor=white" />
+</div>
+
+
 # Express Project
 
 -   강찬수
@@ -89,3 +125,14 @@
 ## 5일차
 
 -   화면 꾸미기(프론트 엔드)
+
+
+
+
+<!-- 영상 -->
+
+
+</br>
+
+<!-- Footer -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=footer&text=Thanks!&fontSize=90" />

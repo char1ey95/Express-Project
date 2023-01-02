@@ -62,17 +62,19 @@ ul, li {
 }
 
 .summary_img1 {
-    background-image: url(../img/cat-g4786ffb7a_640.jpg);
+    background-image: url(../img/plankton.jpg);
     background-size: contain;
 }
 
 .summary_img2 {
-    background-image: url(../img/cat-g677476a78_640.jpg);
+    background-image: url(../img/spongeBob.jpg);
     background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .summary_img3 {
-    background-image: url(../img/wisdom-gcbc495d26_640.jpg);
+    background-image: url(../img/startFish.jpg);
+    background-repeat: no-repeat;
     background-size: contain;
 }
 
