@@ -18,7 +18,6 @@ app.use(router)
 
 
 app.use((error, req, res, next) => {
-    // console.log(error, error.message)
     res.send(`
         <script type='text/javascript'>
             alert('${error.message}');
