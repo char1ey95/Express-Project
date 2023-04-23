@@ -86,31 +86,31 @@
 -   테이블명: user, board
 
 ```sql
--- user
-+-------------+-------------+------+-----+---------+-------+
-| Field       | Type        | Null | Key | Default | Extra |
-+-------------+-------------+------+-----+---------+-------+
-| user_id     | varchar(50) | NO   | PRI | NULL    |       |
-| user_pw     | int         | NO   |     | NULL    |       |
-| user_name   | varchar(50) | NO   |     | NULL    |       |
-| nickname    | varchar(50) | NO   |     | NULL    |       |
-| birth       | date        | NO   |     | NULL    |       |
-| gender      | char(4)     | YES  |     | 남자     |       |
-| telephone   | char(32)    | YES  |     | NULL    |       |
-| mobile      | char(32)    | NO   |     | NULL    |       |
-| user_author | tinyint(1)  | NO   |     | 1       |       |
-| level       | int         | NO   |     | 3       |       |
-+-------------+-------------+------+-----+---------+-------+
+-- users
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| userid    | varchar(50) | NO   | PRI | NULL    |       |
+| userpw    | int         | NO   |     | NULL    |       |
+| username  | varchar(50) | NO   |     | NULL    |       |
+| nickname  | varchar(50) | NO   |     | NULL    |       |
+| birth     | date        | NO   |     | NULL    |       |
+| gender    | char(4)     | YES  |     | 남자    |       |
+| telephone | char(32)    | YES  |     | NULL    |       |
+| mobile    | char(32)    | NO   |     | NULL    |       |
+| author    | tinyint(1)  | YES  |     | 1       |       |
+| level     | int         | YES  |     | 3       |       |
++-----------+-------------+------+-----+---------+-------+
 ```
 
 ```sql
---board
+--boards
 +--------------+-------------+------+-----+-------------------+-------------------+
 | Field        | Type        | Null | Key | Default           | Extra             |
 +--------------+-------------+------+-----+-------------------+-------------------+
 | idx          | int         | NO   | PRI | NULL              | auto_increment    |
-| subject      | varchar(50) | NO   |     | NULL              |                   |
-| user_id      | varchar(50) | NO   |     | NULL              |                   |
+| subject      | varchar(50) | YES  |     | NULL              |                   |
+| userid       | varchar(50) | YES  | MUL | NULL              |                   |
 | content      | text        | YES  |     | NULL              |                   |
 | registerDate | datetime    | YES  |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED |
 | hit          | int         | YES  |     | 0                 |                   |
