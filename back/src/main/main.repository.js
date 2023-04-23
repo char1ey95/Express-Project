@@ -1,6 +1,6 @@
 class MainRepository{
-    constructor({ database }){
-        this.database = database
+    constructor({ pool }){
+        this.pool = pool
     }
 }
 
