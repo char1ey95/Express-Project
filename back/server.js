@@ -2,6 +2,7 @@ const express = require('express')
 const nunjucks = require('nunjucks')
 const cookieParser = require('cookie-parser')
 const router = require('./routes/index')
+const { port } = require("./config")
 const app = express()
 
 app.set('view engine', 'html')
@@ -21,6 +22,6 @@ app.use((error, req, res, next) => {
     `)
 })
 
-app.listen(3000, () => {
-    console.log('start server')
+app.listen(port, () => {
+    console.log(`SERVER PORT:${port} start`)
 })
